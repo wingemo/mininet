@@ -59,14 +59,17 @@ h6.setIP('10.0.0.6/24')
 h7.setIP('10.0.0.7/24') 
 h8.setIP('10.0.0.8/24') 
 
+# Start up controller
+ct.start()
+
 # Start up a new OVS OpenFlow switches
-e1.start()
-e2.start()
-e3.start()
-e4.start()
-a1.start()
-a2.start()
-c1.start()
+e1.start( [ ct ] )
+e2.start( [ ct ] )
+e3.start( [ ct ] )
+e4.start( [ ct ] )
+a1.start( [ ct ] )
+a2.start( [ ct ] )
+c1.start( [ ct ] )
 
 # Test of reachability
 print(h1.cmd('ping -h8'))
