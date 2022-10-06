@@ -76,7 +76,7 @@ c1.start([ct])
 # Test of reachability
 for reciver in list_host:
     if h1 != reciver:
-        print(h1.cmd("ping -c3", reciver.IP()))
+        print(h1.cmd("ping -c1", reciver.IP()))
 
 # Stop the OVS OpenFlow switches
 e1.stop()
