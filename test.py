@@ -34,8 +34,12 @@ class Network( Topo ):
       self.addLink(s1, s3)
       self.addLink(s2, s3)
       self.addLink(s3, s4)
-      
-net = Mininet( topo=Network() )
-net.start()
-net.pinAll()
-net.stop()
+
+def testNetwork():
+    net = Mininet( topo=Network() )
+    net.start()
+    net.pinAll()
+    net.stop()
+    
+def __name__ == '_main_':
+    testNetwork()
