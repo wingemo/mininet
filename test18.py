@@ -8,10 +8,8 @@ h3 = Host("h3")
 h4 = Host("h4")
 h5 = Host("h5")
 h6 = Host("h6")
-h7 = Host("h7")
-h8 = Host("h8")
 
-list_host = [h1, h2, h3, h4, h5, h6, h7, h8]
+list_host = [h1, h2, h3, h4, h5, h6]
 
 # Edge switches
 e1 = OVSSwitch("e1", inNamespace=False)
