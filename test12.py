@@ -37,7 +37,7 @@ Link(e3, a2)
 # Link between aggregation switches
 # and core switch
 Link(a1, c1)
-Link(a2, c1)
+Link(a2, a2)
 
 # Links between hosts and edge switches
 Link(h1, e1)
