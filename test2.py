@@ -24,6 +24,9 @@ a2 = OVSSwitch( 'a2', inNamespace=False )
 # Core switch
 c1 = OVSSwitch( 'c1', inNamespace=False )
 
+# Core switch
+ct = Controller('ct', inNamespace=False )
+
 # Links between edge switches and
 # aggregation switches
 Link(e1,a1)
