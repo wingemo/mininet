@@ -79,9 +79,6 @@ for host in list_host:
         if host != reciver:
             print(host.cmd("ping -c3", reciver.IP()))
 
-# Core switch stop 
-c1.stop()
-
 # Stop the OVS OpenFlow switches
 e1.stop()
 e2.stop()
@@ -89,3 +86,4 @@ e3.stop()
 e4.stop()
 a1.stop()
 a2.stop()
+c1.stop()
