@@ -39,7 +39,7 @@ class Network(Topo):
 def testNetwork():
     net = Mininet(topo=Network())
     net.start()
-    net.pinAll()
+    net.pingAll()
     net.stop()
     
 if __name__ == '__main__':
