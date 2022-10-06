@@ -32,7 +32,7 @@ Link(h4,e2)
 Link(h5,e3)
 Link(h6,e3)
 Link(h7,e4)
-Link(h8,e8)
+Link(h8,e4)
 
 # Links between edge switches and
 # aggregation switches
