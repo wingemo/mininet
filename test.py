@@ -1,4 +1,4 @@
-from mininet.node import Host, OVSSwitch(, Controller
+from mininet.node import Host, OVSSwitch, Controller
 from mininet.link import link
 
 # A host is simply a Node.
