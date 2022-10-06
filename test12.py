@@ -1,7 +1,7 @@
 from mininet.node import Host, OVSSwitch, Controller
 from mininet.link import Link
 
-# A host is simply a Node.
+# Hosts
 h1 = Host("h1")
 h2 = Host("h2")
 h3 = Host("h3")
