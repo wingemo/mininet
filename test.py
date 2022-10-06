@@ -1,3 +1,6 @@
+from mininet.topo import Topo
+from mininet.net import Mininet
+
 class TestNetwork( Topo ):
   "Single network topology"
   def _init_( self ):
