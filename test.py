@@ -1,15 +1,25 @@
 from mininet.node import Host, OVSSwitch, Controller
-from mininet.link import link
+from mininet.link import Link
 
 # A host is simply a Node.
-h1 = Host( 'h1' ).setIP('10.0.0.1/24') # e1
-h2 = Host( 'h2' ).setIP('10.0.0.2/24') # e1
-h3 = Host( 'h3' ).setIP('10.0.0.3/24') # e2
-h4 = Host( 'h4' ).setIP('10.0.0.4/24') # e2
-h5 = Host( 'h5' ).setIP('10.0.0.5/24') # e3
-h6 = Host( 'h6' ).setIP('10.0.0.6/24') # e3
-h7 = Host( 'h7' ).setIP('10.0.0.7/24') # e4
-h8 = Host( 'h8' ).setIP('10.0.0.8/24') # e4
+h1 = Host( 'h1' )
+h2 = Host( 'h2' )
+h3 = Host( 'h3' )
+h4 = Host( 'h4' )
+h5 = Host( 'h5' )
+h6 = Host( 'h6' )
+h7 = Host( 'h7' )
+h8 = Host( 'h8' )
+
+# # Set the IP address for the interface
+h1.setIP('10.0.0.1/24')
+h2.setIP('10.0.0.2/24')
+h3.setIP('10.0.0.3/24') 
+h4.setIP('10.0.0.4/24') 
+h5.setIP('10.0.0.5/24') 
+h6.setIP('10.0.0.6/24') 
+h7.setIP('10.0.0.7/24') 
+h8.setIP('10.0.0.8/24') 
 
 # Edge switches
 e1 = OVSSwitch( 'e1', inNamespace=False )
