@@ -1,4 +1,5 @@
-from mininet.node import Host, OVSSwitch, Controller
+from mininet.node import Host, OVSSwitch, Controlle
+from mininet.net  import Mininet
 from mininet.link import Link
 
 # A host is simply a Node.
@@ -10,6 +11,8 @@ h5 = Host( 'h5' )
 h6 = Host( 'h6' )
 h7 = Host( 'h7' )
 h8 = Host( 'h8' )
+
+list_host = [h1, h2, h3, h4, h5, h6, h7 ,h8]
 
 # Edge switches
 e1 = OVSSwitch( 'e1', inNamespace=False )
@@ -72,13 +75,9 @@ a2.start( [ ct ] )
 c1.start( [ ct ] )
 
 # Test of reachability
-print(h1.cmd('ping -c3', h8.IP()))
-print(h2.cmd('ping -c3', h8.IP()))
-print(h3.cmd('ping -c3', h8.IP()))
-print(h4.cmd('ping -c3', h8.IP()))
-print(h5.cmd('ping -c3', h8.IP()))
-print(h6.cmd('ping -c3', h8.IP()))
-print(h7.cmd('ping -c3', h8.IP()))
+for host in list_host:
+    for reciver in reversed(list_host):
+      print(host.cmd('ping -c3', reciver.IP()))
 
 # Stop the OVS OpenFlow switches
 e1.stop()
