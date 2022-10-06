@@ -1,7 +1,7 @@
 from mininet.topo import Topo
 from mininet.net import Mininet
 
-class TestNetwork( Topo ):
+class Network( Topo ):
   "Single network topology"
   def _init_( self ):
       Topo._init_( self )
@@ -35,7 +35,7 @@ class TestNetwork( Topo ):
       self.addLink(s2, s3)
       self.addLink(s3, s4)
       
-net = Mininet( topo=TestNetwork() )
+net = Mininet( topo=Network() )
 net.start()
 net.pinAll()
 net.stop()
