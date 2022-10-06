@@ -51,7 +51,7 @@ Link(h6, e3)
 Link(h7, e4)
 Link(h8, e4)
 
-# # Set the IP address for the interface
+# Set the IP address for the interface
 h1.setIP("10.0.0.1/24")
 h2.setIP("10.0.0.2/24")
 h3.setIP("10.0.0.3/24")
@@ -73,10 +73,15 @@ a1.start([ct])
 a2.start([ct])
 c1.start([ct])
 
-# Test of reachability
-for reciver in list_host:
-    if h1 != reciver:
-        print(h1.cmd("ping -c1", reciver.IP()))
+# Test of reachability (for every node)
+def reachability_test():
+    for reciver in list_host:
+        if h1 != reciver:
+            print(h1.cmd("ping -c1", reciver.IP()))
+
+# Test of reachability (core switch stopped)
+c1.stop()
+reachability_test()
 
 # Stop the OVS OpenFlow switches
 e1.stop()
@@ -85,4 +90,4 @@ e3.stop()
 e4.stop()
 a1.stop()
 a2.stop()
-c1.stop()
+
