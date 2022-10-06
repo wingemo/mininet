@@ -11,16 +11,6 @@ h6 = Host( 'h6' )
 h7 = Host( 'h7' )
 h8 = Host( 'h8' )
 
-# # Set the IP address for the interface
-h1.setIP('10.0.0.1/24')
-h2.setIP('10.0.0.2/24')
-h3.setIP('10.0.0.3/24') 
-h4.setIP('10.0.0.4/24') 
-h5.setIP('10.0.0.5/24') 
-h6.setIP('10.0.0.6/24') 
-h7.setIP('10.0.0.7/24') 
-h8.setIP('10.0.0.8/24') 
-
 # Edge switches
 e1 = OVSSwitch( 'e1', inNamespace=False )
 e2 = OVSSwitch( 'e2', inNamespace=False )
@@ -55,6 +45,16 @@ Link(e4,a2)
 # and core switch
 Link(a1,c1)
 Link(a2,c1)
+
+# # Set the IP address for the interface
+h1.setIP('10.0.0.1/24')
+h2.setIP('10.0.0.2/24')
+h3.setIP('10.0.0.3/24') 
+h4.setIP('10.0.0.4/24') 
+h5.setIP('10.0.0.5/24') 
+h6.setIP('10.0.0.6/24') 
+h7.setIP('10.0.0.7/24') 
+h8.setIP('10.0.0.8/24') 
 
 # Start up a new OVS OpenFlow switches
 e1.start()
