@@ -2,6 +2,7 @@ class TestNetwork( Topo ):
   "Single network topology"
   def _init_( self ):
       Topo._init_( self )
+      
       #
       h1 = self.addHost( 'h1' )
       h2 = self.addHost( 'h2' )
@@ -18,7 +19,21 @@ class TestNetwork( Topo ):
       s3 = self.addSwitch( 's3' )
       s4 = self.addSwitch( 's4' )
       
-net = Mininet( topo=SingleSwitchTopo( 3 ) )
+      #
+      self.addLink(h1, s1)
+      self.addLink(h2, s1)
+      self.addLink(h3, s2)
+      self.addLink(h4, s2)
+      self.addLink(h5, s3)
+      self.addLink(h6, s3)
+      self.addLink(h7, s3)
+      self.addLink(h8, s3)
+      
+      self.addLink(s1, s3)
+      self.addLink(s2, s3)
+      self.addLink(s3, s4)
+      
+net = Mininet( topo=TestNetwork() )
 net.start()
-CLI( net )
+net.pinAll()
 net.stop()
