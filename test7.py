@@ -72,8 +72,13 @@ a2.start( [ ct ] )
 c1.start( [ ct ] )
 
 # Test of reachability
-for x in range(7):
-  print(hx.cmd('ping -c3', h8.IP()))
+print(h1.cmd('ping -c3', h8.IP()))
+print(h2.cmd('ping -c3', h8.IP()))
+print(h3.cmd('ping -c3', h8.IP()))
+print(h4.cmd('ping -c3', h8.IP()))
+print(h5.cmd('ping -c3', h8.IP()))
+print(h6.cmd('ping -c3', h8.IP()))
+print(h7.cmd('ping -c3', h8.IP()))
 
 # Stop the OVS OpenFlow switches
 e1.stop()
