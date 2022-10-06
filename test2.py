@@ -24,16 +24,6 @@ a2 = OVSSwitch( 'e2', inNamespace=False )
 # Core switch
 c1 = OVSSwitch( 'c1', inNamespace=False )
 
-# Links between hosts and edge switches
-Link(h1,e1)
-Link(h2,e1)
-Link(h3,e2)
-Link(h4,e2)
-Link(h5,e3)
-Link(h6,e3)
-Link(h7,e4)
-Link(h8,e4)
-
 # Links between edge switches and
 # aggregation switches
 Link(e1,a1)
@@ -45,6 +35,16 @@ Link(e4,a2)
 # and core switch
 Link(a1,c1)
 Link(a2,c1)
+
+# Links between hosts and edge switches
+Link(h1,e1)
+Link(h2,e1)
+Link(h3,e2)
+Link(h4,e2)
+Link(h5,e3)
+Link(h6,e3)
+Link(h7,e4)
+Link(h8,e4)
 
 # # Set the IP address for the interface
 h1.setIP('10.0.0.1/24')
