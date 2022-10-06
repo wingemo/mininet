@@ -18,8 +18,8 @@ e3 = OVSSwitch( 'e3', inNamespace=False )
 e4 = OVSSwitch( 'e4', inNamespace=False )
 
 # Aggregation switches
-a1 = OVSSwitch( 'e1', inNamespace=False )
-a2 = OVSSwitch( 'e2', inNamespace=False )
+a1 = OVSSwitch( 'a1', inNamespace=False )
+a2 = OVSSwitch( 'a2', inNamespace=False )
 
 # Core switch
 c1 = OVSSwitch( 'c1', inNamespace=False )
