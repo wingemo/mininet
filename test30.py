@@ -4,8 +4,8 @@ from mininet.net import Mininet
 class Network(Topo):
     "Single network topology"
 
-    def _init_(self):
-        Topo._init_(self)
+    def __init__(self):
+        Topo.__init__(self)
 
         # Hosts to add
         h1 = self.addHost("h1")
@@ -36,12 +36,11 @@ class Network(Topo):
         self.addLink(s2, s3)
         self.addLink(s3, s4)
 
-
 def testNetwork():
     net = Mininet(topo=Network())
     net.start()
     net.pinAll()
     net.stop()
     
-def __name__ == '__main__':
+if __name__ == '__main__':
     testNetwork()
